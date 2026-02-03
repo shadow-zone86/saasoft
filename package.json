@@ -14,9 +14,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "precommit:check": "lint-staged && npm run type-check && npm run test && npm run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "pinia": "^2.2.6",

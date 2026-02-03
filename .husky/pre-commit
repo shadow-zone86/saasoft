@@ -4,15 +4,6 @@
 set -e
 
 echo "🔍 pre-commit: lint (staged files)..."
-npx lint-staged
-
-echo "🔍 pre-commit: type-check..."
-npm run type-check
-
-echo "🔍 pre-commit: test..."
-npm run test
-
-echo "🔍 pre-commit: build..."
-npm run build
+npm run precommit:check
 
 echo "✅ pre-commit passed"
