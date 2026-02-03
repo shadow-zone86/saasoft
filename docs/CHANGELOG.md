@@ -18,12 +18,15 @@
 - FSD-границы в ESLint: запрет импортов “вверх” по слоям
 - `PageLoader` (shared/ui) + `usePageLoader` (shared/lib) для первой загрузки
 - Storybook stories для `BaseModal`
+- `AccountsHeader` (заголовок + кнопка добавления), `AccountsEmpty` (пустое состояние)
 
 ### Changed
 
 - README обновлён: оглавление, быстрый старт, ссылки на `docs/`
 - Обновлён UI (токены/тени/фокус) и стили базовых компонентов (`BaseButton`, `BaseInput`, `BaseSelect`, `BaseModal`)
 - `AccountsHint` принимает текст через проп (по умолчанию — текст из ТЗ)
+- `build:analyze` теперь автоматически открывает отчёт `dist/stats.html` в браузере
+- `BaseModal`: закрытие по клику на backdrop и по `Escape`, блокировка скролла страницы, улучшения a11y (`aria-modal`, `aria-labelledby`)
 
 ### Fixed
 

@@ -128,7 +128,6 @@ export default [
       'storybook-static',
       '*.config.js',
       '.storybook/**',
-      '_sds/**',
     ],
   },
 ]
