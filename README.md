@@ -46,7 +46,7 @@ src/
 
 В проекте включены ESLint-правила, которые **запрещают импорт “вверх” по слоям** (FSD-границы проверяются автоматически).
 
-## Стили (SCSS, как в _sds)
+## Стили (SCSS)
 
 - **Препроцессор:** во всех компонентах используется `lang="scss"`.
 - **Палитра и переменные:** `src/shared/styles/_variables.scss` — цвета (`$color-primary`, `$color-text-*`, `$color-border-*`, `$color-bg-*`, `$color-danger`, `$color-focus` и т.д.), шкала отступов по 4px (`$spacing-xs` … `$spacing-xxl`), типографика, брейкпоинты, радиусы.
@@ -65,7 +65,7 @@ npm run dev
 
 # Сборка
 npm run build
-npm run build:analyze   # сборка + отчёт по размеру бандла (dist/stats.html)
+npm run build:analyze   # сборка + отчёт по размеру бандла (dist/stats.html, откроется в браузере)
 
 # Проверки
 npm run type-check      # проверка типов (vue-tsc)
