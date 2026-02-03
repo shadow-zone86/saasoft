@@ -10,7 +10,7 @@
 - **TypeScript**
 - **Pinia** (состояние + сохранение в localStorage)
 - **Vite**
-- **Storybook** (кастомные UI-компоненты и виджеты)
+- **Storybook** (UI-kit в `shared/ui`)
 
 ## Документация
 
@@ -32,15 +32,19 @@
 
 ```
 src/
-├── app/           # Инициализация, провайдеры (Pinia), роутер
+├── app/           # Инициализация, провайдеры (Pinia), роутер, App.vue
 ├── pages/         # Страницы (Accounts)
-├── widgets/       # Виджеты (AccountsForm)
-├── features/      # Фичи (AccountRow — строка учётной записи)
-├── entities/      # Сущности (Account — константы типов)
-└── shared/        # Общее: UI, типы, валидация, утилиты, стили (SCSS)
+├── widgets/       # Композиция UI блоков (header/hint/list)
+├── features/      # Пользовательские сценарии (ячейки таблицы, add/delete)
+├── entities/      # Account: types, store, mappers, composables, UI
+└── shared/        # UI-kit, helpers, styles, composables (PageLoader)
 ```
 
 Подробнее: [FSD принципы](./docs/03-fsd-principles.md).
+
+## Правила зависимостей (FSD)
+
+В проекте включены ESLint-правила, которые **запрещают импорт “вверх” по слоям** (FSD-границы проверяются автоматически).
 
 ## Стили (SCSS, как в _sds)
 
