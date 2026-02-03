@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  @include font-size($font-size-base);
+  line-height: $line-height-base;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  color: $color-text-primary;
+  background:
+    radial-gradient(900px 460px at 20% 0%, rgba($color-primary, 0.10), transparent 60%),
+    radial-gradient(900px 460px at 100% 10%, rgba($color-info, 0.10), transparent 55%),
+    linear-gradient(
+      180deg,
+      color.adjust($color-bg-page, $lightness: 1%) 0%,
+      $color-bg-page 45%,
+      color.adjust($color-bg-page, $lightness: -1%) 100%
+    );
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba($color-primary, 0.18);
+}
+
+#app {
+  min-height: 100vh;
+}

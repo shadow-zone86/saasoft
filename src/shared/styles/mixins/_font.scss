@@ -1,0 +1,9 @@
+@use "../variables" as *;
+
+@mixin font-size($value) {
+  font-size: $value;
+}
+
+@mixin font-weight($value) {
+  font-weight: $value;
+}
