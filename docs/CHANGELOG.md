@@ -15,10 +15,20 @@
   - [03-fsd-principles.md](./03-fsd-principles.md) — правила FSD
   - [04-di-and-patterns.md](./04-di-and-patterns.md) — DI и паттерны
   - [CHANGELOG.md](./CHANGELOG.md) — история изменений
+- FSD-границы в ESLint: запрет импортов “вверх” по слоям
+- `PageLoader` (shared/ui) + `usePageLoader` (shared/lib) для первой загрузки
+- Storybook stories для `BaseModal`
 
 ### Changed
 
 - README обновлён: оглавление, быстрый старт, ссылки на `docs/`
+- Обновлён UI (токены/тени/фокус) и стили базовых компонентов (`BaseButton`, `BaseInput`, `BaseSelect`, `BaseModal`)
+- `AccountsHint` принимает текст через проп (по умолчанию — текст из ТЗ)
+
+### Fixed
+
+- Storybook сборка в ESM: замена `__dirname` на путь через `import.meta.url`
+- Исправлены SCSS-ошибки, связанные с повторным `@use "sass:color"`
 
 ## [0.1.0] — 2026-02-03
 
@@ -29,5 +39,5 @@
 - Архитектура FSD: `app`, `pages`, `widgets`, `features`, `entities`, `shared`
 - Accounts UI: таблица, добавление/удаление, валидация, маскирование пароля для LDAP
 - UI-kit в `shared/ui` + Storybook
-- PageLoader (первичная загрузка страницы)
+ 
 

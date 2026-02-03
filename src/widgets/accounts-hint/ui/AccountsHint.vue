@@ -1,11 +1,18 @@
 <template>
   <p class="accounts-hint">
     <span class="accounts-hint__icon" aria-hidden="true">?</span>
-    Для указания нескольких меток для одной пары логин/пароль используйте разделитель ;
+    {{ props.text }}
   </p>
 </template>
 
 <script setup lang="ts">
+interface AccountsHintProps {
+  text?: string
+}
+
+const props = withDefaults(defineProps<AccountsHintProps>(), {
+  text: 'Для указания нескольких меток для одной пары логин/пароль используйте разделитель ;',
+})
 </script>
 
 <style lang="scss" scoped>
