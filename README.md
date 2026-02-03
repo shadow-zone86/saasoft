@@ -76,7 +76,8 @@ npm run test:watch      # Vitest в watch-режиме
 npm run test:coverage   # Vitest с покрытием
 
 # Pre-commit (Husky)
-# При коммите автоматически запускаются: lint-staged → type-check → test → build
+# При коммите автоматически запускается `npm run precommit:check`:
+# lint-staged → type-check → test → build
 
 # Storybook
 npm run storybook

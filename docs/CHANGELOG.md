@@ -19,6 +19,7 @@
 - `PageLoader` (shared/ui) + `usePageLoader` (shared/lib) для первой загрузки
 - Storybook stories для `BaseModal`
 - `AccountsHeader` (заголовок + кнопка добавления), `AccountsEmpty` (пустое состояние)
+- `precommit:check` (lint-staged → type-check → test → build) для единообразного запуска проверок перед коммитом
 
 ### Changed
 
@@ -27,6 +28,8 @@
 - `AccountsHint` принимает текст через проп (по умолчанию — текст из ТЗ)
 - `build:analyze` теперь автоматически открывает отчёт `dist/stats.html` в браузере
 - `BaseModal`: закрытие по клику на backdrop и по `Escape`, блокировка скролла страницы, улучшения a11y (`aria-modal`, `aria-labelledby`)
+- Husky: хук `pre-commit` переведён на запуск через `npm run precommit:check`
+- Husky: `prepare` переведён на `husky install`
 
 ### Fixed
 
