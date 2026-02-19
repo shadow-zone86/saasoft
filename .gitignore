@@ -6,4 +6,6 @@ coverage
 .env.*
 stats.html
 .storybook-static
+storybook-static
+storybook-static/
 .DS_Store
